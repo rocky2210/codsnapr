@@ -10,7 +10,7 @@ if (!rootElement) {
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/codsnapr">
       <App />
     </BrowserRouter>
   </React.StrictMode>
