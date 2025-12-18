@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { SYNTAX_THEMES, BACKGROUNDS, FONT_OPTIONS } from '../constants.js';
+import { SYNTAX_THEMES, BACKGROUNDS, FONT_OPTIONS, LANGUAGES } from '../constants.js';
 import {
   Settings,
   Layout,
@@ -77,6 +77,7 @@ const BackgroundSelect = ({ value, onChange }) => {
           </div>
         </div>
       )}
+      
     </div>
   );
 };
@@ -121,6 +122,20 @@ const Controls = ({ settings, updateSettings }) => {
               />
             </div>
           </div>
+
+      <div>
+        <label className="block text-sm text-gray-400 mb-2">Language</label>
+        <select 
+          className="w-full bg-black border border-gray-700 text-white rounded p-2 text-sm focus:outline-none focus:border-blue-500"
+          value={settings.language}
+          onChange={(e) => updateSettings('language', e.target.value)}
+        >
+          {LANGUAGES.map(l => (
+            <option key={l.id} value={l.id}>{l.name}</option>
+          ))}
+        </select>
+      </div>
+
         </div>
 
         {/* Typography */}

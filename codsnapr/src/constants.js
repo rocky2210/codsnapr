@@ -311,3 +311,32 @@ export const FONT_OPTIONS = [
   { id: 'Source Code Pro', name: 'Source Code Pro' },
   { id: 'Cascadia Code', name: 'Cascadia Code' },
 ];
+
+export const LANGUAGES = [
+  { id: 'javascript', name: 'JavaScript' },
+  { id: 'python', name: 'Python' },
+  { id: 'c', name: 'C' },
+  { id: 'cpp', name: 'C++' },
+  { id: 'java', name: 'Java' },
+  { id: 'go', name: 'Go' },
+  { id: 'dart', name: 'Dart / Flutter' },
+  { id: 'bash', name: 'Bash / Shell' },
+];
+
+export const LANGUAGE_KEYWORDS = {
+  javascript: '\\b(const|let|var|function|return|if|else|for|while|import|export|from|class|extends|=>|async|await|new|this|super|try|catch|finally|throw)\\b',
+  
+  c: '\\b(auto|break|case|char|const|continue|default|do|double|else|enum|extern|float|for|goto|if|int|long|register|return|short|signed|sizeof|static|struct|switch|typedef|union|unsigned|void|volatile|while)\\b',
+  
+  python: '\\b(and|as|assert|async|await|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield|True|False|None)\\b',
+  
+  dart: '\\b(abstract|as|assert|async|await|break|case|catch|class|const|continue|covariant|default|deferred|do|dynamic|else|enum|export|extends|extension|external|factory|final|finally|for|Function|get|hide|if|implements|import|in|interface|is|library|mixin|new|null|on|operator|part|rethrow|return|set|show|static|super|switch|sync|this|throw|try|typedef|var|void|while|with|yield)\\b',
+  
+  cpp: '\\b(alignas|alignof|and|asm|auto|bool|break|case|catch|char|class|const|constexpr|continue|delete|do|double|else|enum|explicit|export|extern|false|float|for|friend|if|inline|int|long|mutable|namespace|new|nullptr|operator|private|protected|public|register|return|short|signed|sizeof|static|struct|switch|template|this|throw|true|try|typedef|typename|union|unsigned|using|virtual|void|volatile|while)\\b',
+
+  java: '\\b(abstract|assert|boolean|break|byte|case|catch|char|class|const|continue|default|do|double|else|enum|extends|final|finally|float|for|goto|if|implements|import|instanceof|int|interface|long|native|new|null|package|private|protected|public|return|short|static|strictfp|super|switch|synchronized|this|throw|throws|transient|try|void|volatile|while)\\b',
+
+  go: '\\b(break|case|chan|const|continue|default|defer|else|fallthrough|for|func|go|goto|if|import|interface|map|package|range|return|select|struct|switch|type|var)\\b',
+  
+  bash: '\\b(if|then|else|elif|fi|for|while|do|done|case|esac|function|select|in|time|coproc|break|continue|return|exit|export|readonly|local|declare)\\b',
+};

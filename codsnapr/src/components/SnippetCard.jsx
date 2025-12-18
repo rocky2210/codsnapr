@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { simpleHighlight } from '../utils/highlight.js';
+import { simpleHighlight } from '../utils/highlight.jsx';
 import { ArrowRight, Instagram, Terminal } from 'lucide-react';
 
 // Custom X (Twitter) Logo Component
@@ -137,7 +137,8 @@ const SnippetCard = forwardRef(({
                   </span>
                 )}
                 <span>
-                  {simpleHighlight(line, theme)}
+                  {/* {simpleHighlight(line, theme)} */}
+                  {simpleHighlight(line, theme, settings.language)}
                 </span>
               </div>
             ))}
