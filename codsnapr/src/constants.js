@@ -283,6 +283,20 @@ export const BACKGROUNDS = [
 { id: 'slate', name: 'Slate', value: '#94a3b8' },
 { id: 'ink', name: 'Ink', value: '#020617' },
 
+{ id: 'sunshine-yellow', name: 'Sunshine Yellow', value: 'linear-gradient(140deg, #fceabb, #f8b500)' },
+{ id: 'golden-hour', name: 'Golden Hour', value: 'linear-gradient(140deg, #FFD200, #F7971E)' },
+{ id: 'lemon-zest', name: 'Lemon Zest', value: 'linear-gradient(140deg, #fffbd5, #f9d423)' },
+
+{ id: 'lavender-mist', name: 'Lavender Mist', value: 'linear-gradient(140deg, #E6DADA, #C9D6FF)' },
+{ id: 'violet-dream', name: 'Violet Dream', value: 'linear-gradient(140deg, #8E2DE2, #4A00E0)' },
+{ id: 'soft-lilac', name: 'Soft Lilac', value: 'linear-gradient(140deg, #d3cce3, #e9e4f0)' },
+
+{ id: 'coffee', name: 'Coffee', value: 'linear-gradient(140deg, #603813, #b29f94)' },
+{ id: 'chocolate', name: 'Chocolate', value: 'linear-gradient(140deg, #3E2723, #795548)' },
+{ id: 'caramel', name: 'Caramel', value: 'linear-gradient(140deg, #C79081, #dfa579)' },
+{ id: 'espresso', name: 'Espresso', value: 'linear-gradient(140deg, #1e130c, #9a8478)' },
+
+
 
   { id: 'transparent', name: 'Transparent', value: 'transparent' },
 ];
