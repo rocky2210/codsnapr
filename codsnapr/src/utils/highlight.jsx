@@ -16,6 +16,9 @@ export const simpleHighlight = (code, theme, language = 'javascript') => {
   } else if (language === 'bash') {
     // Bash: only # comments
     commentRegex = /(#.*?$)/gm;
+  } else if (language === 'mysql') {
+  // MySQL: --, #, and /* */
+  commentRegex = /(--.*?$|#.*?$|\/\*[\s\S]*?\*\/)/gm;
   } else {
     // All others: // and /* */
     commentRegex = /(\/\*[\s\S]*?\*\/|\/\/.*?$)/gm;
@@ -55,7 +58,9 @@ export const simpleHighlight = (code, theme, language = 'javascript') => {
     }
 
     // 2. Strings (highest priority)
-    const stringMatch = rest.match(/^("([^"\\]|\\.)*"|'([^'\\]|\\.)*'|`([^`\\]|\\.)*`)/);
+    // const stringMatch = rest.match(/^("([^"\\]|\\.)*"|'([^'\\]|\\.)*'|`([^`\\]|\\.)*`)/);
+    const stringMatch = rest.match(/^("([^"\\]|\\.)*"|'([^'\\]|\\.)*'|`[^`]*`)/);
+
     if (stringMatch) {
       parts.push(
         <span key={key++} style={{ color: c.string }}>
@@ -142,6 +147,20 @@ export const simpleHighlight = (code, theme, language = 'javascript') => {
         funcDefHandled = true;
       }
     }
+    // 7. Class names (capitalized) — skip for MySQL
+    if (language !== 'mysql') {
+      const classMatch = rest.match(/^([A-Z][a-zA-Z0-9_]*)/);
+      if (classMatch) {
+        parts.push(
+          <span key={key++} style={{ color: c.class }}>
+            {classMatch[0]}
+          </span>
+        );
+        i += classMatch[0].length;
+        continue;
+      }
+    }
+
 
     if (funcDefHandled) continue;
 

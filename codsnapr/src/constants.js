@@ -335,6 +335,7 @@ export const LANGUAGES = [
   { id: 'go', name: 'Go' },
   { id: 'dart', name: 'Dart / Flutter' },
   { id: 'bash', name: 'Bash / Shell' },
+  { id: 'mysql', name: 'MySQL / SQL' },
 ];
 
 export const LANGUAGE_KEYWORDS = {
@@ -353,4 +354,7 @@ export const LANGUAGE_KEYWORDS = {
   go: '\\b(break|case|chan|const|continue|default|defer|else|fallthrough|for|func|go|goto|if|import|interface|map|package|range|return|select|struct|switch|type|var)\\b',
   
   bash: '\\b(if|then|else|elif|fi|for|while|do|done|case|esac|function|select|in|time|coproc|break|continue|return|exit|export|readonly|local|declare)\\b',
+
+  mysql: '\\b(SELECT|INSERT|UPDATE|DELETE|FROM|WHERE|JOIN|INNER|LEFT|RIGHT|FULL|OUTER|ON|GROUP|BY|HAVING|ORDER|LIMIT|OFFSET|AS|DISTINCT|CREATE|ALTER|DROP|TRUNCATE|TABLE|DATABASE|INDEX|VIEW|PROCEDURE|FUNCTION|TRIGGER|PRIMARY|KEY|FOREIGN|REFERENCES|UNIQUE|NOT|NULL|DEFAULT|AUTO_INCREMENT|VALUES|INTO|SET|AND|OR|IN|BETWEEN|LIKE|IS|EXISTS|CASE|WHEN|THEN|ELSE|END|UNION|ALL|ASC|DESC|ENGINE|CHARSET|COLLATE)\\b',
+
 };
